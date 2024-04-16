@@ -143,10 +143,10 @@ open class VisitableView: UIView {
         screenshotContainerView.addSubview(screenshot)
 
         NSLayoutConstraint.activate([
-            screenshot.centerXAnchor.constraint(equalTo: screenshotContainerView.centerXAnchor),
-            screenshot.topAnchor.constraint(equalTo: screenshotContainerView.topAnchor),
-            screenshot.widthAnchor.constraint(equalToConstant: screenshot.bounds.size.width),
-            screenshot.heightAnchor.constraint(equalToConstant: screenshot.bounds.size.height)
+            screenshot.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            screenshot.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            screenshot.topAnchor.constraint(equalTo: self.topAnchor),
+            screenshot.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
 
         screenshotView = screenshot        
